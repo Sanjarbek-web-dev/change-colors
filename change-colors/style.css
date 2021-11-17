@@ -1,0 +1,121 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.change-colors {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+.change-colors button {
+    width: 130px;
+    cursor: pointer;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #000;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50% -50%);
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 35px;
+}
+.switch input {
+    display: none;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+input:checked + .slider {
+    background-color: #0000ffb7;
+}
+input:checked + .slider:before {
+    transform: translate(50px);
+}
+.red {
+    background-color: red;
+    color: #fff;
+}
+.yellow {
+    background-color: yellow;
+    color: #000;
+}
+.blue {
+    background-color: blue;
+    color: #fff;
+}
+.golden {
+    background-color: goldenrod;
+    color: #000;
+}
+.green {
+    background-color: green;
+    color: #fff;
+}
+.white {
+    background-color: white;
+    color: #000;
+}
+.red:hover,
+.yellow:hover,
+.green:hover,
+.white:hover,
+.golden:hover,
+.blue:hover {
+    background-color: #ccc;
+    color: red;
+    box-shadow: 0 0 4px 2px #ccc;
+    transition: 0.3s ease;
+}
+.dark-mode {
+    background-color: #0a0a0ad0;
+}
+/* responsive */
+@media only screen and (max-width: 569px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        /* position: relative; */
+        top: 50px;
+        left: 40%;
+        transform: translate(-50% -50%);
+        cursor: pointer;
+    }
+    .change-colors {
+        position: absolute;
+        top: 100px;
+    }
+}
